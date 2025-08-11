@@ -10,6 +10,7 @@ sessions/*
 init.local.vim            
 local/*                   
 lua/configs/lspconfig.lua
+lazy-lock.json
 
 # general
 .DS_Store
