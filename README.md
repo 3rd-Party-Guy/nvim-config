@@ -11,7 +11,7 @@ Here are some details:
 I also use ghostty as my terminal emulator, but its configuration is much more minimal, so I will just post it here.
 
 # Ghostty configuration
-``
+```
 theme = dark:CGA,light:ayu_light
 
 font-family = "Iosevka Nerd Font"
@@ -20,4 +20,4 @@ window-decoration = none
 window-padding-x = 0
 window-padding-y = 0
 window-padding-color = extend-always
-``
+```
