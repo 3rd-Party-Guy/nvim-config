@@ -1,10 +1,23 @@
-**This repo is supposed to be used as config by NvChad users!**
+# Neovim Configuration
 
-- The main nvchad repo (NvChad/NvChad) is used as a plugin by this repo.
-- So you just import its modules , like `require "nvchad.options" , require "nvchad.mappings"`
-- So you can delete the .git from this repo ( when you clone it locally ) or fork it :)
+I have been using Neovim for quite a while so I thought I should back my configuration up somewhere.
 
-# Credits
+Here are some details:
+- Uses NvChad as a base
+- Custom pureblack base46 theme
+- LSP configuration and automatic loading using Mason and mason.lspconfig
+- jkl; instead of hjkl for navigation
 
-1) Lazyvim starter https://github.com/LazyVim/starter as nvchad's starter was inspired by Lazyvim's . It made a lot of things easier!
-# Neovim Config
+I also use ghostty as my terminal emulator, but its configuration is much more minimal, so I will just post it here.
+
+# Ghostty configuration
+``
+theme = dark:CGA,light:ayu_light
+
+font-family = "Iosevka Nerd Font"
+
+window-decoration = none
+window-padding-x = 0
+window-padding-y = 0
+window-padding-color = extend-always
+``

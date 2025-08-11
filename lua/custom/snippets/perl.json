@@ -1,0 +1,30 @@
+{
+  "lxdebug-msg": {
+    "prefix": "lxmsg",
+    "body": [
+      "$::lxdebug->message(0, \"${1:message}\");"
+    ],
+    "description": "Simple log message"
+  },
+  "lxdebug-dump": {
+    "prefix": "lxdmp",
+    "body": [
+      "$::lxdebug->dump(0, \"${1:key}\", $${2:value});"
+    ],
+    "description": "Log message with data"
+  },
+  "lxdebug-enter-sub": {
+    "prefix": "lxent",
+    "body": [
+      "$main::lxdebug->enter_sub();"
+    ],
+    "description": "Enters subroutine for debugger"
+  },
+  "lxdebug-leave-sub": {
+    "prefix": "lxlev",
+    "body": [
+      "$main::lxdebug->leave_sub();"
+    ],
+    "description": "Leaves subroutine for debugger"
+  }
+}
