@@ -1,0 +1,18 @@
+# nvim
+pack/*               
+cache/*              
+undo/*               
+swap/*               
+backup/*             
+sessions/*           
+.nvimlog             
+.nvimrc.local             
+init.local.vim            
+local/*                   
+lua/configs/lspconfig.lua
+
+# general
+.DS_Store
+*.swp
+*.swo
+*~
