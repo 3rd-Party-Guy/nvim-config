@@ -18,4 +18,4 @@ local lspconfig = require("lspconfig")
 --      perlcriticProfile = '/opt/prod/odyn-erp/.perlcriticrc',
 --    },
 --  },
-}
+-- }
