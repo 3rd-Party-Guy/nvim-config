@@ -27,4 +27,7 @@ end, { desc = "Telescope (<leader>fw) with global file pattern" })
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
 -- LSP
-map("n", "<leader>gd", vim.lsp.buf.definition, { desc = "(LSP) Go to definition"})
+map("n", "<leader>gd", vim.lsp.buf.definition, { desc = "(LSP) Go to definition" })
+map("n", "<leader>gn", vim.lsp.buf.rename, { desc = "(LSP) Rename" })
+map("n", "<leader>gh", vim.lsp.buf.hover, { desc = "(LSP) Hover" })
+map("n", "<leader>gr", vim.lsp.buf.references, { desc = "(LSP) References" })
