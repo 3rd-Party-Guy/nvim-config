@@ -10,6 +10,13 @@ vim.filetype.add({
   },
 })
 
+vim.filetype.add({
+  extension = {
+    zig = "zig",
+    zir = "zig",
+  },
+})
+
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
