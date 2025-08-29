@@ -31,3 +31,4 @@ map("n", "<leader>gd", vim.lsp.buf.definition, { desc = "(LSP) Go to definition"
 map("n", "<leader>gn", vim.lsp.buf.rename, { desc = "(LSP) Rename" })
 map("n", "<leader>gh", vim.lsp.buf.hover, { desc = "(LSP) Hover" })
 map("n", "<leader>gr", vim.lsp.buf.references, { desc = "(LSP) References" })
+map("n", "<leader>ga", vim.lsp.buf.code_action, { desc = "(LSP) Code Action" })
