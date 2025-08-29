@@ -66,5 +66,18 @@ return {
 
   {
     "andweeb/presence.nvim"
-  }
+  },
+
+  {
+    "akinsho/toggleterm.nvim",
+    version = "*",
+    event = "VeryLazy",
+    opts = {
+      open_mapping = [[<leader>.]],
+      direction = "float",
+      float_opts = {
+        border = "curved",
+      }
+    },
+  },
 }
