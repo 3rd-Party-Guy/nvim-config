@@ -5,6 +5,7 @@ return {
   	  ensure_installed = {
    		  "vim", "lua", "vimdoc",
         "html", "css", "perl", "haskell",
+        "markdown", "markdown_inline",
    	  },
     },
   },
@@ -61,7 +62,15 @@ return {
   },
 
   {
-    "ThePrimeagen/vim-be-good",
+    'nvimdev/lspsaga.nvim',
+    event = "LspAttach",
+    config = function()
+        require('lspsaga').setup({})
+    end,
+    dependencies = {
+        'nvim-treesitter/nvim-treesitter',
+        'nvim-tree/nvim-web-devicons',
+    }
   },
 
   {
