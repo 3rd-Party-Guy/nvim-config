@@ -1,12 +1,16 @@
 return {
   {
   	"nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
     opts = {
   	  ensure_installed = {
    		  "vim", "lua", "vimdoc",
-        "html", "css", "perl", "haskell",
         "markdown", "markdown_inline",
+        "cs", "zig",
    	  },
+      highlight = { enable = true },
+      incremental_selection = { enable = true },
+      indent = { enable = true },
     },
   },
 
@@ -64,13 +68,14 @@ return {
   {
     'nvimdev/lspsaga.nvim',
     event = "LspAttach",
-    config = function()
-        require('lspsaga').setup({})
-    end,
+    opts = {
+      lightbulb = {
+        virtual_text = false,
+      },
+    },
     dependencies = {
-        'nvim-treesitter/nvim-treesitter',
         'nvim-tree/nvim-web-devicons',
-    }
+    },
   },
 
   {
