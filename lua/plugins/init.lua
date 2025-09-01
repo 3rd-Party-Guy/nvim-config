@@ -6,7 +6,7 @@ return {
   	  ensure_installed = {
    		  "vim", "lua", "vimdoc",
         "markdown", "markdown_inline",
-        "cs", "zig",
+        "c_sharp", "zig", "perl",
    	  },
       highlight = { enable = true },
       incremental_selection = { enable = true },
@@ -86,5 +86,15 @@ return {
     "akinsho/toggleterm.nvim",
     version = "*",
     config = true,
+    event = "VeryLazy",
+    opts = {
+      size = 15,
+      open_mapping = [[<leader>.]],
+      shade_terminals = true,
+      direction = 'float',
+      float_opts = {
+        border = 'curved'
+      },
+    },
   },
 }

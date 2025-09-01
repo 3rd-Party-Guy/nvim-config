@@ -41,17 +41,6 @@ require("lazy").setup({
   { import = "plugins" },
 }, lazy_config)
 
--- configure plugins
-require("toggleterm").setup {
-  size = 15,
-  open_mapping = [[<C-\>]],
-  shade_terminals = true,
-  direction = 'float',
-  float_opts = {
-    border = 'curved'
-  }
-}
-
 -- load theme
 dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
