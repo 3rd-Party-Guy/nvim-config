@@ -89,7 +89,7 @@ return {
     event = "VeryLazy",
     opts = {
       size = 15,
-      open_mapping = [[<leader>.]],
+      open_mapping = [[<C-.>]],
       shade_terminals = true,
       direction = 'float',
       float_opts = {
