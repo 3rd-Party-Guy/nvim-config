@@ -79,7 +79,43 @@ return {
   },
 
   {
-    "andweeb/presence.nvim"
+    'vyfor/cord.nvim',
+    build = ':Cord update',
+    event = 'VeryLazy',
+    opts = {
+      buttons = {
+        {
+          label = function(opts)
+            return opts.repo_url and 'Join Psychosis'
+          end,
+          url = function(opts)
+            return opts.repo_url or 'https://discord.gg/eJ3H9GdQCs'
+          end,
+        }
+      },
+      text = {
+        workspace = function(opts)
+          local hour = tonumber(os.date('%H'))
+          local times = {
+            { 22, '🌙 Late night coding' },
+            { 18, '🌆 Evening session' },
+            { 12, '☀️ Afternoon coding' },
+            { 5,  '🌅 Morning productivity' },
+            { 0,  '🌙 Midnight hacking' },
+          }
+
+          local status = "Coding"
+          for _, t in ipairs(times) do
+            if hour >= t[1] then
+              status = t[2]
+              break
+            end
+          end
+
+          return string.format('%s: %s', status, opts.filename or "No file")
+        end
+      }
+    },
   },
 
   {
