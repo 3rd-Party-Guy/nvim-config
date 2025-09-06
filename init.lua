@@ -17,6 +17,7 @@ vim.filetype.add({
   },
 })
 
+vim.opt.relativenumber = true
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
