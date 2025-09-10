@@ -14,11 +14,12 @@ map("v", "k", "j", { desc = "Move up" })
 map("v", "l", "k", { desc = "Move down" })
 map("v", ";", "l", { desc = "Move right" })
 
--- Window navigation
+-- Windows
 map("n", "<C-j>", "<C-w>h", { desc = "Focus left window" })
 map("n", "<C-k>", "<C-w>j", { desc = "Focus up window" })
 map("n", "<C-l>", "<C-w>k", { desc = "Focus down window" })
 map("n", "<C-;>", "<C-w>l", { desc = "Focus right window" })
+map("n", "<C-w>h", "<cmd>split<CR>", { desc = "Split window horizontally" })
 
 -- Telescope
 map("n", "<leader>fc", function()
