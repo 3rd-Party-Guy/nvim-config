@@ -14,6 +14,7 @@ vim.filetype.add({
   extension = {
     zig = "zig",
     zir = "zig",
+    zon = "zig",
   },
 })
 
