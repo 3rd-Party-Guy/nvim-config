@@ -19,3 +19,14 @@ local lspconfig = require("lspconfig")
 --    },
 --  },
 -- }
+
+lspconfig.zls.setup {
+  name = "zls",
+  filetypes = "zig",
+  settings = {
+    zls = {
+      warn_style = true,
+      enable_autofix = true,
+    }
+  }
+}
