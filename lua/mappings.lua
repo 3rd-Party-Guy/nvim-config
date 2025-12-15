@@ -42,3 +42,6 @@ map("n", "<leader>lci", "<cmd>Lspsaga incoming_calls<CR>", { desc = "(LSP) Callh
 map("n", "<leader>lco", "<cmd>Lspsaga outgoing_calls<CR>", { desc = "(LSP) Callhierarchy outgoing" })
 map("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { desc = "(LSP) Jump to next diagnostic" })
 map("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", { desc = "(LSP) Jump to previous diagnostic" })
+
+-- zig
+map("n", "<leader>zr", "<cmd>TermExec size=40 dir=git_dir direction=horizontal name=zig-build cmd='zig build run'<CR>", { desc = "" })
