@@ -43,5 +43,16 @@ map("n", "<leader>lco", "<cmd>Lspsaga outgoing_calls<CR>", { desc = "(LSP) Callh
 map("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { desc = "(LSP) Jump to next diagnostic" })
 map("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", { desc = "(LSP) Jump to previous diagnostic" })
 
--- zig
+-- Zig
 map("n", "<leader>zr", "<cmd>TermExec size=40 dir=git_dir direction=horizontal name=zig-build cmd='zig build run'<CR>", { desc = "" })
+
+-- ToggleTerm
+local lazygit = require("toggleterm.terminal").Terminal:new({
+  cmd = "lazygit",
+  hidden = true,
+  direction = "float",
+})
+
+vim.keymap.set("n", "<leader>gg", function()
+  lazygit:toggle()
+end, { desc = "LazyGit" })
