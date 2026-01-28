@@ -3,21 +3,15 @@ require "nvchad.mappings"
 local map = vim.keymap.set
 
 -- Normal mode navigation
-map("n", "j", "h", { desc = "Move left" })
-map("n", "k", "j", { desc = "Move up" })
-map("n", "l", "k", { desc = "Move down" })
+map("n", "l", "h", { desc = "Move left" })
 map("n", ";", "l", { desc = "Move right" })
 
 -- Visual mode navigation
-map("v", "j", "h", { desc = "Move left" })
-map("v", "k", "j", { desc = "Move up" })
-map("v", "l", "k", { desc = "Move down" })
+map("v", "l", "h", { desc = "Move left" })
 map("v", ";", "l", { desc = "Move right" })
 
 -- Windows
-map("n", "<C-j>", "<C-w>h", { desc = "Focus left window" })
-map("n", "<C-k>", "<C-w>j", { desc = "Focus up window" })
-map("n", "<C-l>", "<C-w>k", { desc = "Focus down window" })
+map("n", "<C-l>", "<C-w>h", { desc = "Focus left window" })
 map("n", "<C-;>", "<C-w>l", { desc = "Focus right window" })
 map("n", "<C-w>h", "<cmd>split<CR>", { desc = "Split window horizontally" })
 
@@ -44,7 +38,11 @@ map("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { desc = "(LSP) Jump to 
 map("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", { desc = "(LSP) Jump to previous diagnostic" })
 
 -- Zig
-map("n", "<leader>zr", "<cmd>TermExec size=40 dir=git_dir direction=horizontal name=zig-build cmd='zig build run'<CR>", { desc = "" })
+map("n", "<leader>zr", "<cmd>TermExec size=40 dir=git_dir direction=horizontal name=zig-build cmd='zig build run && exit'<CR>", { desc = "Zig build and run" })
+
+-- Apache
+map("n", "<leader>ar", "<cmd>TermExec size=20 dir=git_dit direction=horizontal name=Reload Apache cmd='aparl && exit'<CR>", { desc = "Reload Apache" })
+map("n", "<leader>as", "<cmd>TermExec size=20 dir=git_dit direction=horizontal name=Restart Apache cmd='aparl && exit'<CR>", { desc = "Restart Apache" })
 
 -- ToggleTerm
 local lazygit = require("toggleterm.terminal").Terminal:new({
