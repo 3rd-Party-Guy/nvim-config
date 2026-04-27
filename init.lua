@@ -18,6 +18,12 @@ vim.filetype.add({
   },
 })
 
+vim.filetype.add({
+  extension = {
+    odin = "odin",
+  },
+})
+
 vim.opt.relativenumber = true
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"

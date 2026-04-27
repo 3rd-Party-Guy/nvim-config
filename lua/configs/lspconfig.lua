@@ -3,7 +3,7 @@ require("nvchad.configs.lspconfig").defaults()
 -- Define servers using Neovim's native API (0.11+)
 vim.lsp.config("perlnavigator", {
   cmd = { "perlnavigator" },
-  filetypes = "perl",
+  filetypes = { "perl" },
   settings = {
     perlnavigator = {
       perlPath = "perl",
@@ -17,7 +17,7 @@ vim.lsp.config("perlnavigator", {
 
 vim.lsp.config("zls", {
   cmd = { "/home/nikolay.hadzhiev/.zvm/bin/zls" },
-  filetypes = "zig",
+  filetypes = { "zig" },
   settings = {
     zls = {
       zig_exe_path = "/home/nikolay.hadzhiev/.zvm/bin/zig",
@@ -29,11 +29,11 @@ vim.lsp.config("zls", {
 
 vim.lsp.config("ols", {
   cmd = { "ols" },
-  filetypes = "odin",
+  filetypes = { "odin" },
   init_options = {
     checker_args = "-strict-style",
     collections = {
-      { name = "core",   path = "/usr/local/odin/core" },
+      { name = "core", path = "/usr/local/odin/core" },
       { name = "vendor", path = "/usr/local/odin/vendor" },
     },
     enable_semantic_tokens = false,
@@ -46,4 +46,4 @@ vim.lsp.config("ols", {
   },
 })
 
-vim.lsp.enable({ "perlnavigator", "zls", "ols" })
+vim.lsp.enable { "perlnavigator", "zls", "ols" }

@@ -19,6 +19,7 @@ map("n", "<C-w>h", "<cmd>split<CR>", { desc = "Split window horizontally" })
 map("n", "<leader>fc", function()
   require("telescope").extensions.live_grep_args.live_grep_args()
 end, { desc = "Telescope (<leader>fw) with global file pattern" })
+map({ "n", "v" }, "<leader>fs", require("telescope.builtin").grep_string, { desc = "telescrope find in selection" })
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
 -- LSP
@@ -38,18 +39,33 @@ map("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { desc = "(LSP) Jump to 
 map("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", { desc = "(LSP) Jump to previous diagnostic" })
 
 -- Zig
-map("n", "<leader>zr", "<cmd>TermExec size=40 dir=git_dir direction=horizontal name=zig-build cmd='zig build run && exit'<CR>", { desc = "Zig build and run" })
+map(
+  "n",
+  "<leader>zr",
+  "<cmd>TermExec size=40 dir=git_dir direction=horizontal name=zig-build cmd='zig build run && exit'<CR>",
+  { desc = "Zig build and run" }
+)
 
 -- Apache
-map("n", "<leader>ar", "<cmd>TermExec size=20 dir=git_dit direction=horizontal name=Reload Apache cmd='aparl && exit'<CR>", { desc = "Reload Apache" })
-map("n", "<leader>as", "<cmd>TermExec size=20 dir=git_dit direction=horizontal name=Restart Apache cmd='aparl && exit'<CR>", { desc = "Restart Apache" })
+map(
+  "n",
+  "<leader>ar",
+  "<cmd>TermExec size=20 dir=git_dit direction=horizontal name=Reload Apache cmd='aparl && exit'<CR>",
+  { desc = "Reload Apache" }
+)
+map(
+  "n",
+  "<leader>as",
+  "<cmd>TermExec size=20 dir=git_dit direction=horizontal name=Restart Apache cmd='aparl && exit'<CR>",
+  { desc = "Restart Apache" }
+)
 
 -- ToggleTerm
-local lazygit = require("toggleterm.terminal").Terminal:new({
+local lazygit = require("toggleterm.terminal").Terminal:new {
   cmd = "lazygit",
   hidden = true,
   direction = "float",
-})
+}
 
 vim.keymap.set("n", "<leader>gg", function()
   lazygit:toggle()
